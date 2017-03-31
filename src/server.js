@@ -12,7 +12,7 @@ import routes from './pages/Routes';
 import indexStatic from './indexStatic';
 
 const app = Express()
-const port = 3000
+const port = process.env.PORT || 8080;
 
 //Serve static files
 app.use('/public', Express.static('static'));
