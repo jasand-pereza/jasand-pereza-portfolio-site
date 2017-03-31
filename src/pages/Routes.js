@@ -6,7 +6,7 @@ import { Route, IndexRoute } from 'react-router'
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 
-// all routes
+// all routes 
 module.exports = (
     <div>
         <Route exact path="/" component={HomePage}/>
