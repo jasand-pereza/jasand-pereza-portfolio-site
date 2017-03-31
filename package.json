@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "portfolio site",
-  "main": "app.js",
   "engines": {
     "node": "6.0.0",
     "npm": "3.8.6"
