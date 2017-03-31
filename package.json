@@ -9,9 +9,9 @@
     "npm": "3.8.6"
   },
   "scripts": {
-    "start": "babel-node ./src/server.js",
-    "build": "babel ./src/ -d build",
-    "serve": "node ./build/src/server.js"
+    "start": "nodemon ./src/server.js --exec babel-node --presets es2015,stage-2", 
+    "build": "babel ./src -d ./dist --presets es2015,stage-2",
+    "serve": "node ./dist/server.js"
   },
   "author": "jasand",
   "license": "MIT",
