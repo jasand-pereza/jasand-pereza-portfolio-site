@@ -1,6 +1,7 @@
 {
   "name": "jasandpereza.dev",
   "version": "1.0.0",
+  "private": true,
   "description": "portfolio site",
   "main": "app.js",
   "engines": {
@@ -8,7 +9,9 @@
     "npm": "3.8.6"
   },
   "scripts": {
-    "start": "babel-node ./src/server.js"
+    "start": "babel-node ./src/server.js",
+    "build": "babel ./src/ -d build",
+    "serve": "node ./build/src/server.js"
   },
   "author": "jasand",
   "license": "MIT",
@@ -23,6 +26,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
     "react-dom": "^15.4.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
