@@ -31,8 +31,8 @@ node_modules
 *.js.map
 
 #dist folder
-build
-dist
+build/*
+dist/*
 
 # IDEA/Webstorm project files
 .idea
