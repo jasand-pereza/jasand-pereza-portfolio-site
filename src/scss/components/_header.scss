@@ -1,0 +1,33 @@
+.header-main {
+    height: auto;
+    
+    &.overlay-exposed {
+        @include transition(all 0.8s);
+        height: 100%;
+    }
+    h1 {
+        height: auto;
+        margin-left: -12px;
+        max-width: 300px;
+    }
+    img {
+        height: auto;
+        width: 100%;
+    }
+    &.stuck {
+        @include transition(all 0.8s);
+        background: url("/img/bg-diagonal-pattern.png") repeat;
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+        z-index: 4;
+
+        h1 {
+           @include transition(margin-top 0.8s);
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        img {
+            width: 70%;
+        }
+    }
+}

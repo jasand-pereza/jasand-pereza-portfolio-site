@@ -23,7 +23,7 @@ import AboutPage from './pages/AboutPage';
 //const store = createStore(counterApp, preloadedState);
 
 ReactDOM.render(
-  ///<Provider store={{}}> -- use when implemented store
+  ///<Provider store={{}}> -- use when store is implemented
     <Router history={browserHistory}>
         {routes}
     </Router>

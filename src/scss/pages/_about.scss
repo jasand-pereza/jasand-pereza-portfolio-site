@@ -1,0 +1,23 @@
+.list-stack {
+    padding-left: 0;
+
+    span {
+        @include font_title;
+        color: $black;
+        margin-bottom: 20px;
+        padding: 5px 20px 0px 40px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 90%;
+    }
+}
+.list-stack-gray {
+    @extend .list-stack;
+    span {
+        background: $medium-gray;
+    }
+}
+.page-content-top {
+    position: relative;
+    z-index: 2;
+}

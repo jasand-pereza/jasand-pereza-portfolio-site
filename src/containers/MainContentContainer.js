@@ -6,6 +6,12 @@ export default class MainContentContainer extends React.Component {
         super(props);
     }
     render() {
-        return (<MainContent content="the content"/>)
+        return (
+            <div>
+                <MainContent content="the content">
+                    {this.props.children}
+                </MainContent>
+            </div>
+        )
     }
 }

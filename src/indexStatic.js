@@ -5,7 +5,8 @@ export default (html, preloadedState) => {
     <html>
       <head>
         <title>Jasand Pereza | Portfolio</title>
-        <link rel="stylesheet" href="/public/assets/styles.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Slabo+27px" rel="stylesheet">
+        <link rel="stylesheet" href="/styles.css"/>
       </head>
       <body>
         <div id="app">${html}</div>

@@ -1,0 +1,33 @@
+body {
+    background: #000 url('/img/bg-body.gif');
+    background-size: 160.08px 320.16px;
+    
+    &:before {
+        content: '';
+        width: 100%;
+        height: 700px;
+        background-image: url(/img/bg-stage-lighting.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+        opacity: 0.9;
+    }
+}
+p, strong, b, h1 {
+    color: #FFF;
+}
+.row {
+    max-width: $max_width_row;
+}
+.row-shorter {
+    max-width: $max_width_row_shorter;
+}
+.page-wrap {
+    min-height: 50%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-bottom: -1px;
+    position: relative;
+}

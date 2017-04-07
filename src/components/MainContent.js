@@ -5,6 +5,10 @@ export default class MainContent extends React.Component {
         super(props);
     }
     render() {
-        return(<div className="main-content"><p>{ this.props.content }</p></div>)
+        return(
+            <div className="main-content ut-bg-black">
+                {this.props.children}
+            </div>
+        );
     }
 }

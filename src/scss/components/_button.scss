@@ -1,0 +1,26 @@
+.button {
+    @include font_title;
+    font-size: 28px;
+    display: inline-block;
+    line-height: 1.4;
+    padding: 7px 20px 7px 20px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+.button + .button {
+    margin-left: 10px;
+}
+.button, .btn-yellow {
+    background: $yellow;
+    border: solid $yellow 2px;
+    color: $black;
+}
+.btn-yellow-outline {
+    background: transparent;
+    border: solid $yellow 2px;
+    color: $yellow;
+}
+.btn-blue {
+    background: $blue;
+    border: solid $blue 2px;
+}

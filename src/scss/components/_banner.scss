@@ -1,0 +1,28 @@
+.banner-container {
+    display: table;
+    height: 450px;
+    width: 100%;
+
+    &.large {
+        height: 580px;
+    }
+}
+
+.banner {
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    width: 100%;
+
+    .text-saying {
+        background: url('/img/bg-diagonal-pattern.png') repeat;
+        background-size: 50%;
+        margin: auto;
+        max-width: 1000px;
+        padding: 30px 12% 30px 10%;
+        width: 80%;
+    }  
+}

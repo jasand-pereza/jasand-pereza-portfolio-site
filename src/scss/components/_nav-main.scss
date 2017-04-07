@@ -1,0 +1,102 @@
+.nav-main {
+    margin-left: 40px;
+    position: absolute;
+    top: 180px;
+    z-index: 10;
+    
+    ul {
+        position: relative;
+
+        &:before {
+            background-color: $yellow;
+            content: '';
+            height: 100%;
+            left: -13.1px;
+            position: absolute;
+            width: 1px;
+        }
+    }
+    li {
+        line-height: 50px;
+        position: relative;
+        
+        &:hover {
+            @extend .nav-item-active;
+        }
+        &:before {
+            @include node($yellow);
+            @include transition(all 0.1s);
+            left: -16.5px;
+            top: 0;
+        }
+    }
+    a {
+        @include font_title;
+        color: $light_gray;
+        text-transform: uppercase;
+    }
+    ul li:hover {
+        &:before {
+            @include transition(all 0.1s);
+            background: $blue;
+            height: 10px;
+            width: 10px;
+        }
+    }
+    ul li:hover a {
+        background: $blue;
+        ;
+    }
+}
+
+ .header-main .hamburger {
+    display: none;
+}
+ .header-main.stuck .hamburger {
+     display: block;
+     z-index: 4;
+}
+.nav-item-active {
+    a {
+        background: $yellow;
+        color: $black;
+        left: -10px;
+        padding: 5px 40px 3px 9px;
+        position: relative;
+    }
+}
+
+.header-main.stuck .nav-main {
+    position: relative;
+    top: 0;
+
+    .hamburger {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+.header-main.stuck .nav-main ul {
+    display: none;        
+}
+
+.header-main.stuck.overlay-exposed {
+    background-color: rgba(0,0,0,0.9);
+
+    h1 {
+        @include transition(margin-top 0.8s);
+        margin-top: 15px;
+    }
+
+    .medium-3 {
+        width: 100%;
+    }
+    .nav-main ul {
+        display: block;
+        float: right;
+        right: 10px;
+        position: relative;
+        top: 60px;
+        width: 170px;
+    }
+}

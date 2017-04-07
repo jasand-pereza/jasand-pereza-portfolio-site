@@ -1,0 +1,55 @@
+.slider {
+    
+    height: 450px;
+    width: 100%;
+
+    .slider-slides {
+        display: table;
+        height: 100%;
+        width: 100%;
+
+        li {
+            @extend .banner;
+        }
+    }
+}
+.controls-slider-wrapper {
+    width: 100%;
+    position: relative;
+    
+    .controls-slider {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 0;
+        text-align: center;
+        position: relative;
+        top: -100px;
+
+        &:after {
+            background: $blue;
+            content: '';
+            height: 1px;
+            width: 11%;
+            display: block;
+            top: -5px;
+            position: relative;
+            margin: auto;
+            padding: 0;
+            text-align: center;
+        }
+    }
+   
+    li {
+        display: inline-block;
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    button {
+        @include node($blue);
+        cursor: pointer;
+        top: 0;
+    }
+}

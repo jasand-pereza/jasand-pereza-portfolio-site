@@ -1,0 +1,51 @@
+.footer-main {
+    background: $black;
+    position: relative;
+    min-height: 300px;
+
+    h3 {
+        display: inline-block;
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    nav {
+        float: right;
+        
+        li {
+            display: inline-block;
+            margin-right: 15px;
+            padding-right: 15px;
+            border-right: solid thin $light_gray;
+
+            &:last-child {
+                border: none;
+            }
+        }
+        a {
+            @include font_title;
+            color: $light_gray;
+            display: block;
+            font-size: 15px;
+            text-transform: uppercase;
+            line-height: 18px;
+        }
+    }
+    span {
+        @include font_callout;
+        color: $white;
+        display: block;
+        font-size: 14px;
+        text-align: center;
+    }
+    .social-links {
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        a {
+            font-size: 20px;
+            color: $medium-gray;
+        }
+    }
+}

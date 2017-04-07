@@ -1,0 +1,26 @@
+// site specific mixins
+@mixin font_title() {
+    font-family: 'Fjalla One', sans-serif;
+}
+@mixin font_callout() {
+    font-family: 'Slabo 27px', serif;
+}
+@mixin font_body() {
+    font-family: 'Roboto', sans-serif;
+}
+@mixin node($color) {
+    background-color: $color;
+    content: '';
+    display: inline-block;
+    height: 8px;
+    position: relative;
+    width: 8px;
+}
+// general mixins
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

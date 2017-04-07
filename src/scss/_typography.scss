@@ -1,0 +1,105 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'fjalla One';
+    font-weight: 100;
+    text-transform: uppercase;
+}
+p, strong, b, a {
+    font-family: 'Slabo 27px';
+}
+a {
+    text-decoration: none;
+}
+p {
+    @include font_body;
+}
+.body-copy li {
+    @include font_callout;
+    color: $white;
+    line-height: 2;
+    list-style: none;
+    &:before {
+        @include node($yellow);
+        left: -15px;
+    }
+}
+.title {
+    @include font_title;
+}
+.title-list {
+    @include font_title;
+    text-transform: uppercase;
+    color: $yellow;
+}
+.small-copy {
+    @include font_callout;
+    font-size: 12px;
+    color: $white;
+}
+.callout {
+    @include font_callout;
+    font-size: 25px;
+}
+.text-saying {
+    @include font_callout;
+    color: $white;
+    font-size: 22px;
+    text-align: center;
+}
+.htag-yellow, 
+.ut-bg-black .htag-yellow {
+    color: $yellow;
+}
+h2.callout {
+    text-transform: none;
+    color: $yellow;
+}
+.block-highlight {
+    @include font_callout;
+    color: $black;
+    display: inline-block;
+    font-size: 28px;
+    padding: 10px 20px 10px 40px;
+    position: relative;
+
+    &:before {
+        background-image: url(/img/bg-diagonal-pattern.png);
+        background-position-x: 0;
+        background-size: 460px;
+        content: '';
+        height: 100%;
+        left: -18px;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        width: 40px;
+        z-index: 2;
+    }
+
+}
+.block-highlight-yellow {
+    background-color: $yellow;
+    color: $black;
+    padding: 20px;
+}
+.block-highlight-gun-metal {
+    background-color: $dark_gray;
+    color: darken($white, 30%);
+    &:before {
+        -webkit-filter: invert(100%); /* Safari */
+        filter: invert(100%);
+    }
+}
+.block-highlight-blue {
+    background-color: $blue;
+    color: $black;
+}
+.block-highlight-jumbo {
+    background: url(/img/bg-diagonal-pattern.png) #313030;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    width: 100%;
+
+    &:before {
+        content: none;
+    }
+}

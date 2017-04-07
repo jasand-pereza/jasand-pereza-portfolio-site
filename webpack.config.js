@@ -6,7 +6,7 @@ module.exports = {
     context: path.resolve('src/'),
     entry: {
         'bundle.js': './client.js', 
-        'styles.css':  './scss/main.scss',
+        'styles.css':  ['./scss/main.scss', './scss/lib/hamburgers.min.css'],
     },
     output: {
         path: path.resolve('build/'),
@@ -18,7 +18,12 @@ module.exports = {
         historyApiFallback: true
     },
     plugins: [
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('styles.css'),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        })
     ],
     module: {
         rules: [
@@ -42,10 +47,21 @@ module.exports = {
                     fallback: "style-loader",
                     use: ['css-loader', 'sass-loader']
                 })
+            },
+            {
+                test: /\.woff(2)?(\?[a-z0-9]+)?$/,
+                exclude: /node_modules/,
+                loader: "url-loader?limit=10000&mimetype=application/font-woff"
+            }, 
+            {
+                test: /\.(ttf|eot|svg)(\?[a-z0-9]+)?$/,
+                exclude: /node_modules/,
+                loader: "url-loader"
             }
         ]
     },
      resolve: {
-        extensions: [' ', '.js', '.es6']
+        extensions: [' ', '.js', '.es6'],
+        alias: {'waypoints': 'waypoints/lib/jquery.waypoints.min.js'}
     }
 }
