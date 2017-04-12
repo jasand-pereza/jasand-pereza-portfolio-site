@@ -6,6 +6,13 @@
     padding: 7px 20px 7px 20px;
     text-transform: uppercase;
     box-sizing: border-box;
+
+    @media screen and (max-width: 799px) {
+        font-size: 20px;
+    }
+}
+.btn-small {
+    font-size: 20px;
 }
 .button + .button {
     margin-left: 10px;
@@ -23,4 +30,9 @@
 .btn-blue {
     background: $blue;
     border: solid $blue 2px;
+}
+.btn-blue-outline {
+    background: transparent;
+    border: solid $blue 2px;
+    color: $blue;
 }

@@ -1,9 +1,57 @@
+@mixin stuck-header {
+    @include transition(all 0.8s);
+    background: url("/img/bg-diagonal-pattern.png") repeat;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    z-index: 4;
+
+    h1 {
+        @include transition(margin-top 0.8s);
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    img {
+        width: 70%;
+    }
+    @media screen and (max-width: 799px) {
+        background-image: none;
+        background-color: $black;
+    }
+}
+
+
 .header-main {
     height: auto;
     
     &.overlay-exposed {
         @include transition(all 0.8s);
         height: 100%;
+
+        .header-random-saying {
+            display: block;
+            max-width: 570px;
+            position: relative;
+            top: -270px;
+            width: 70%;
+
+            blockquote {
+                @extend .text-saying;
+                color: darken($white, 30%);
+                font-size: 30px;
+                margin-left: 0;
+                text-align: left;
+
+                span {
+                    display: block;
+                    float: right;
+                    font-size: 19px;
+                    text-align: right;
+                }
+            }
+            @media screen and (max-width: 799px) {
+                display: none;
+            }
+        }
     }
     h1 {
         height: auto;
@@ -15,19 +63,18 @@
         width: 100%;
     }
     &.stuck {
-        @include transition(all 0.8s);
-        background: url("/img/bg-diagonal-pattern.png") repeat;
-        background-color: rgba(0,0,0,0.5);
-        width: 100%;
-        z-index: 4;
-
-        h1 {
-           @include transition(margin-top 0.8s);
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-        img {
-            width: 70%;
-        }
+        @include stuck-header;
     }
+}
+
+ @media screen and (max-width: 799px) {
+    .header-main {
+        @include stuck-header;
+        position: fixed;
+        top: 0;
+    }
+}
+
+.header-random-saying {
+    display: none;
 }

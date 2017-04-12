@@ -6,6 +6,7 @@ import React from 'react';
 // components
 import Button from './Button';
 import Slide from './Slide';
+import { getRandomSaying } from './../data/DataMethods';
 
 export default class Slider extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ export default class Slider extends React.Component {
             <div className="slider">
                 <ul className="ut-unlist slider-slides">
                     <Slide image="/img/hipster.jpg">
-                        <p className="text-saying">Don’t let Jasand work remotely from home. He’s probably chopping wood between writing lines of code.</p>
+                        <p className="text-saying">&ldquo;{getRandomSaying()}&rdquo;</p>
                     </Slide>
                 </ul>
                 {

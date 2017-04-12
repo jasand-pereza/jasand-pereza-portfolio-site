@@ -19,7 +19,7 @@ export default class WorkGridContols extends React.Component {
 
             return (
                 <li key={i}>
-                    <Button isButtonElement={isButtonElement} url={url} target={target} classNames="btn-yellow-outline ">{ item.name }</Button>
+                    <Button otherAttribs={(item.categories !== null) ? { 'data-cat-filter-ids': '0,' + item.categories.join(',') } : null} onClick={this.props.clickHandler} isButtonElement={isButtonElement} url={url} target={target} classNames="btn-yellow-outline ">{ item.name }</Button>
                 </li>
             );
         });

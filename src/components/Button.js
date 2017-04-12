@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Button = ({isButtonElement = false, url='', target="_self", classNames='', children,}) => {
+const Button = ({isButtonElement = false, url='', target="_self", classNames='', children, onClick=null, otherAttribs=null }) => {
     if(isButtonElement) {
         return (
-            <button className={'button ' + classNames}>{children}</button>
+            <button onClick={onClick} className={'button ' + classNames} {...otherAttribs} >{children}</button>
         );
     }
-    return (<a href={url} className={'button ' + classNames} target={target}>{children}</a>)
+    return (<a href={url} onClick={onClick} className={'button ' + classNames} target={target}>{children}</a>)
     
 }
 

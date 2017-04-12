@@ -48,4 +48,21 @@
             color: $medium-gray;
         }
     }
+    @media screen and (max-width: 799px) {
+        nav {
+            float: none;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        h3 {
+            text-align: center;
+            display: block;
+        }
+
+        .social-links {
+            text-align: center;
+            display: block;
+        }
+    }
 }

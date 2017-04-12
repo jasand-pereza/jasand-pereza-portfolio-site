@@ -5,6 +5,8 @@ export default (html, preloadedState) => {
     <html>
       <head>
         <title>Jasand Pereza | Portfolio</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Slabo+27px" rel="stylesheet">
         <link rel="stylesheet" href="/styles.css"/>
       </head>

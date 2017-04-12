@@ -31,10 +31,10 @@ export default class HomePage extends React.Component {
         let currentLocation = this.props.location.pathname;
 
         return (
-            <div>
+            <div className="tmpl-home">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
-                <video id="video-top-home" className="video-top-home" src="/video/workshop-injury.mp4"  autoPlay></video>
+                <video id="video-top-home" className="video-top-home" src="/video/walking.mp4"  autoPlay></video>
                 <div className="page-wrap">
                     <MainContentContainer page="home">
                         <div className="row row-shorter">
@@ -42,9 +42,9 @@ export default class HomePage extends React.Component {
                                 <p className="callout">Once a graphic designer, now a full-stack code wrangler, I’m obsessed with making the web a meaningful habitat for the user and fellow developers.</p> 
                                 <Spacer/>
                                 <div className="btn-box">
-                                    <Button classNames="btn-yellow" url="#"><span>View The Legend</span></Button>
-                                    <Button classNames="btn-yellow-outline" url="#"><span>See Craft</span></Button><br/><br/>
-                                    <Button classNames="btn-blue" url="#"><span>You&apos;re just here to see my code > </span></Button>
+                                    <Button classNames="btn-yellow" url="/about"><span>View The Legend</span></Button>
+                                    <Button classNames="btn-yellow-outline" url="/work"><span>See Craft</span></Button><br/><br/>
+                                    <Button classNames="btn-blue" url="https://www.github.com/jasand-pereza" target="_blank"><span>You&apos;re just here to see my code > </span></Button>
                                 </div>
                                 <br/>
                                 <br/>
@@ -53,7 +53,7 @@ export default class HomePage extends React.Component {
                         </div>
                         <Spacer multiplier={4}/>
                         <div className="row">
-                            <Slider></Slider>
+                            <Slider isSingle={true}></Slider>
                         </div>
                     </MainContentContainer>
                 </div>

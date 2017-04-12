@@ -30,4 +30,15 @@ p, strong, b, h1 {
     overflow-x: hidden;
     margin-bottom: -1px;
     position: relative;
+
+    @media screen and (max-width: 799px) {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .columns {
+        padding-left: 1.625rem;
+        padding-right: 1.625rem;
+    }
 }

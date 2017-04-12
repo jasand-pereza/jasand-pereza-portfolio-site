@@ -3,6 +3,8 @@
 // libraries
 import React from 'react';
 
+
+
 // components
 import Footer from './../components/Footer';
 import MainNav from './../components/MainNav';
@@ -19,10 +21,48 @@ export default class WorkPage extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    componentWillMount() {
+        this.setState({
+            dataWorkGrid: Object.assign({}, DataWorkGrid)
+        });
+    }
+    filterClickHandler(e) {
+        let $element = $(e.target);
+        if($element.text().search(/code/i) > -1) return true;
+        e.preventDefault();
+
+        let clickedFilters = $(e.target).data('catFilterIds').split(',');
+        this.showWorkWithCatIds(clickedFilters);
+    }
+    showWorkWithCatIds(catIds) {
+        const state = this.state;
+        let newState = state;
+        let filteredWorkItems = state.dataWorkGrid.work.map((workItem) => {
+            let showWorkItem = false;
+
+            workItem.categories.forEach((wCatId) => {
+                catIds.forEach((catId) => {
+                    catId = parseInt(catId);
+                    if(catId == wCatId) {
+                        showWorkItem = true;
+                        return;
+                    }
+                });
+                if(showWorkItem === true) return;
+
+            });
+            workItem.tileShow = showWorkItem;
+            return workItem;
+        });
+        newState.dataWorkGrid.work = filteredWorkItems;
+        this.setState(newState);
+    }
+
     render() {
         let currentLocation = this.props.location.pathname;
         return (
-            <div>
+            <div className="tmpl-work">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
                 <div className="page-wrap">
@@ -36,15 +76,15 @@ export default class WorkPage extends React.Component {
                         <Spacer multiplier={3}/>
                         <div className="row row-shorter">
                             <div className="small-12 medium-9 columns">
-                                <WorkGridControls data={DataWorkGrid}/>
+                                <WorkGridControls clickHandler={this.filterClickHandler.bind(this)} data={DataWorkGrid}/>
                             </div>
                         </div>
                         <Spacer />
-                        <WorkGrid data={DataWorkGrid} />
+                        <WorkGrid data={this.state.dataWorkGrid} />
                     </MainContentContainer>
                 </div>
                 <Spacer multiplier={3}/>
-                <Slider></Slider>
+                <Slider isSingle={true}></Slider>
                 <Footer/>                    
             </div>
         );

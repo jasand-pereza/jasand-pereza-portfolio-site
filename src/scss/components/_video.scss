@@ -1,6 +1,6 @@
 .video-top,
-.video-top-home {
-    @include transition(opacity 0.5s);
+.video-top-home,
+.video-404 {
     width: 100%;
     height: auto;
     position: fixed;
@@ -10,13 +10,21 @@
     filter: grayscale(100%);
 
     &.hidden {
-        @include transition(opacity 0.5s);
         opacity: 0;
     }
 }
 .video-top-home {
+    @include transition(opacity 0.5s);
     opacity: 0.3;
     transform: scaleX(-1);
+}
+.video-404 {
+    @include transition(opacity 3s);
+    opacity: 0.4;
+}
+.video-top {
+    @include transition(opacity 3s);
+    opacity: 0.4;
 }
 .video-overlay {
     width: 100%;
@@ -24,8 +32,6 @@
     position: fixed;
     z-index: 1;
     top: 0;
-    opacity: 0.7;
-    filter: grayscale(100%) brightness(30%);
     @include transition(all 1s);
     &.hidden {
         @include transition(all 5s);

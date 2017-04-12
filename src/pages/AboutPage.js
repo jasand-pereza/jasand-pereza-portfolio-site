@@ -2,6 +2,7 @@
 
 // libraries
 import React from 'react';
+import Cookies from 'js-cookie';
 
 // components
 import Footer from './../components/Footer';
@@ -17,15 +18,73 @@ export default class AboutPage extends React.Component {
     constructor(props) {
         super(props);
     }
+    handleVideo() {
+        let $video = $('#video-top');        
+        $video[0].playbackRate = 2.0;
+        let overlayVisible = !Cookies.get('hideAboutVideoOverlay');
+        let $videoOverlay = null;
+
+        console.log(overlayVisible);
+        if(overlayVisible) {
+            $videoOverlay = $('#video-overlay');
+            $videoOverlay[0].playbackRate = 1.5;
+        }
+       
+        let videoPart1Handler = function() {
+            if(this.currentTime >= 5.8 && overlayVisible) {
+                $videoOverlay.removeClass('hidden');
+                $video.addClass('hidden');
+                $video[0].pause(); 
+                $videoOverlay[0].play();
+                this.removeEventListener('timeupdate', videoPart1Handler);
+                return;
+            } else if(this.currentTime >= 17) {
+                $video.addClass('hidden');
+            }
+        }
+        let videoPart2Handler = function() {
+            if(this.currentTime >= 0.5) {
+                $video.removeClass('hidden');
+                $video[0].currentTime = 16;
+            }
+            if(this.currentTime >= 7) {
+                $videoOverlay.addClass('hidden');
+            }
+            if(this.currentTime >= 12) {
+                $videoOverlay.remove();
+                $video.addClass('hidden');
+                $videoOverlay[0].removeEventListener('timeupdate', videoPart2Handler);
+                return;
+            }
+            Cookies.set('hideAboutVideoOverlay', true, { expires: 7, path: '' });
+        }
+        $video[0].addEventListener("timeupdate", videoPart1Handler);
+        
+        if(overlayVisible) {
+            $videoOverlay[0].addEventListener("timeupdate", videoPart2Handler);
+        }
+        
+    }
+    componentDidMount() {
+        this.handleVideo();
+    }
     render() {
         let currentLocation = this.props.location.pathname;
 
         return (
-            <div>
+            <div className="tmpl-about">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
                 <video id="video-top" className="video-top " src="/video/fpo-axe2.mp4"  autoPlay></video>
-                <video id="video-overlay" className="video-overlay hidden" src="/video/wood-flying.mp4"></video>
+
+                
+                { // only show overlay video once unless cookies are cleared
+                    (!Cookies.get('hideAboutVideoOverlay'))
+                ?
+                    <video id="video-overlay" className="video-overlay hidden" src="/video/wood-flying-grayscale.mp4"></video>
+                :
+                    null
+                }
                 
                 <div className="page-wrap">
                     <MainContentContainer page="about">
@@ -118,7 +177,7 @@ export default class AboutPage extends React.Component {
                     </MainContentContainer>
                 </div>
                 <div className="row">
-                    <Slider></Slider>
+                    <Slider isSingle={true}></Slider>
                 </div>
                 <Footer/>                    
             </div>

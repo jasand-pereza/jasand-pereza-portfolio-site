@@ -39,6 +39,11 @@ p {
     @include font_callout;
     font-size: 25px;
 }
+.huge, h1.huge {
+    @include font_title;
+    font-size: 100px;
+    color: $blue;
+}
 .text-saying {
     @include font_callout;
     color: $white;

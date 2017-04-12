@@ -1,7 +1,7 @@
 .nav-main {
     margin-left: 40px;
     position: absolute;
-    top: 180px;
+    top: 140px;
     z-index: 10;
     
     ul {
@@ -66,37 +66,72 @@
     }
 }
 
-.header-main.stuck .nav-main {
-    position: relative;
-    top: 0;
+// all stuck 
+@mixin stuck() {
 
-    .hamburger {
-        position: absolute;
-        top: 0;
-        right: 0;
+   &.overlay-exposed {
+        background-color: rgba(0,0,0,0.9);
+
+        h1 {
+            @include transition(margin-top 0.8s);
+            margin-top: 15px;
+        }
+        .medium-3 {
+            width: 100%;
+        }
+        .nav-main ul {
+            display: block;
+            float: right;
+            right: 10px;
+            position: relative;
+            top: 60px;
+            width: 170px;
+        }
     }
-}
-.header-main.stuck .nav-main ul {
-    display: none;        
-}
-
-.header-main.stuck.overlay-exposed {
-    background-color: rgba(0,0,0,0.9);
-
-    h1 {
-        @include transition(margin-top 0.8s);
-        margin-top: 15px;
-    }
-
-    .medium-3 {
-        width: 100%;
-    }
-    .nav-main ul {
-        display: block;
-        float: right;
-        right: 10px;
+    .nav-main {
         position: relative;
-        top: 60px;
-        width: 170px;
+        top: 0;
+
+        @media screen and (min-width: 800px) {
+            .hamburger {
+                position: absolute;
+                top: 0;
+                right: 0;
+            } 
+        }
+
+        ul {
+            display: none;
+        }
+    }
+}
+
+.header-main.stuck {
+    @include stuck;
+}
+
+@media screen and (max-width: 799px) {
+    .header-main,
+    .header-main.stuck {
+        @include stuck;
+        
+        .hamburger {
+            display: block;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        &.overlay-exposed {
+            .nav-main {
+                top: 50px;
+
+                 ul {
+                    display: block;
+                    left: 36%;
+                    width: 100%;
+                }
+            }
+        }
     }
 }
