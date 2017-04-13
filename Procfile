@@ -1,1 +1,1 @@
-web: npm build:dist-run"
+web: npm run build:dist-run"
