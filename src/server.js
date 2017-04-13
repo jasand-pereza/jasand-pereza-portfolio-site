@@ -14,7 +14,7 @@ import indexStatic from './indexStatic';
 // ---  begin server-side and routes code ---
 
 const app = Express()
-const port = process.env.PORT || 9000; // let Heroku assign a port if available
+const port = process.env.PORT || 8080; // let Heroku assign a port if available
 
 //Serve static files
 app.use('/assets', Express.static('public/assets'));
