@@ -1,8 +1,9 @@
 
 // libs
-require('waypoints');
-require('./../../node_modules/waypoints/lib/shortcuts/sticky.min.js');
-require('./../lib/jquery.jrumble.min.js');
+if(typeof window != 'undefined') {
+    require('./../../node_modules/waypoints/lib/jquery.waypoints.min.js');
+    require('./../../node_modules/waypoints/lib/shortcuts/sticky.min.js');
+}
 
 // local libs
 import { getRandomSaying } from './../data/DataMethods';
@@ -23,7 +24,6 @@ export default class Header extends React.Component {
         let $video = $('#video-top-home');
         let sticky = null;    
         
-
         let initSticky = () => {
             sticky = new Waypoint.Sticky({ 
                 element: $header[0], 
@@ -65,7 +65,7 @@ export default class Header extends React.Component {
             <header id="header-main" className={'header-main ' + this.props.styleClasses}>
                 <div className="row row-shorter">
                     <div className="medium-9 columns">
-                        <h1><img src="/img/logo.png"/></h1>
+                        <h1><img src="/assets/img/logo.png"/></h1>
                     </div>
                     <div className="medium-3 columns">
                         <MainNav currentLocation={this.props.currentLocation}/>

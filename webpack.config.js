@@ -9,7 +9,7 @@ module.exports = {
         'styles.css':  ['./scss/main.scss', './scss/lib/hamburgers.min.css'],
     },
     output: {
-        path: path.resolve('build/'),
+        path: path.resolve('public/'),
         publicPath: 'public/assets/',
         filename: '[name]'
     },

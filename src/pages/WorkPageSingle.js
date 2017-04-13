@@ -32,7 +32,7 @@ export default class WorkPageSingle extends React.Component {
             return (
                 <div className="row row-shorter" key={i}>
                     <div className="medium-9 columns">
-                        <img src={ '/img/work/' + workImage.src } alt={ workImage.title } title={ workImage.title } />
+                        <img src={ '/assets/img/work/' + workImage.src } alt={ workImage.title } title={ workImage.title } />
                         <p>{ workImage.caption }</p>
                          <Spacer/>
                     </div>

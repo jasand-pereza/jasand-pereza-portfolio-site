@@ -16,7 +16,7 @@ export default class Slider extends React.Component {
         return (
             <div className="slider">
                 <ul className="ut-unlist slider-slides">
-                    <Slide image="/img/hipster.jpg">
+                    <Slide image="/assets/img/hipster.jpg">
                         <p className="text-saying">&ldquo;{getRandomSaying()}&rdquo;</p>
                     </Slide>
                 </ul>

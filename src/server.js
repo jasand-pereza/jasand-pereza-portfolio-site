@@ -18,7 +18,7 @@ const app = Express()
 const port = process.env.PORT || 8080; // let Heroku assign a port if available
 
 //Serve static files
-app.use('/public', Express.static('static'));
+app.use('/assets', Express.static('public'));
 
 // This is fired every time the server side receives a request
 app.use(handleRender);

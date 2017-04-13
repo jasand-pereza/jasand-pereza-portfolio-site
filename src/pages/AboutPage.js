@@ -75,13 +75,13 @@ export default class AboutPage extends React.Component {
             <div className="tmpl-about">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
-                <video id="video-top" className="video-top " src="/video/fpo-axe2.mp4"  autoPlay></video>
+                <video id="video-top" className="video-top " src="/assets/video/fpo-axe2.mp4"  autoPlay></video>
 
                 
                 { // only show overlay video once unless cookies are cleared
                     (!Cookies.get('hideAboutVideoOverlay'))
                 ?
-                    <video id="video-overlay" className="video-overlay hidden" src="/video/wood-flying-grayscale.mp4"></video>
+                    <video id="video-overlay" className="video-overlay hidden" src="/assets/video/wood-flying-grayscale.mp4"></video>
                 :
                     null
                 }
@@ -132,7 +132,7 @@ export default class AboutPage extends React.Component {
                         </div> 
                         <Spacer multiplier={2}/>
                         <div className="row">
-                            <Banner image="/img/fpo-photo-tools.jpg" size="large">
+                            <Banner image="/assets/img/fpo-photo-tools.jpg" size="large">
                                 <p className="text-saying">When Jasand is not developing things, he&apos;s probably in the wood shop (garage) with a cold beer and make&ndash;believing he&apos;s Bob Vila. </p>
                             </Banner>
                         </div>

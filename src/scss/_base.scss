@@ -1,12 +1,12 @@
 body {
-    background: #000 url('/img/bg-body.gif');
+    background: #000 url('/assets/img/bg-body.gif');
     background-size: 160.08px 320.16px;
     
     &:before {
         content: '';
         width: 100%;
         height: 700px;
-        background-image: url(/img/bg-stage-lighting.png);
+        background-image: url(/assets/img/bg-stage-lighting.png);
         background-repeat: no-repeat;
         background-position: top center;
         position: absolute;

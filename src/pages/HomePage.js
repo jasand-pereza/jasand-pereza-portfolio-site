@@ -34,7 +34,7 @@ export default class HomePage extends React.Component {
             <div className="tmpl-home">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
-                <video id="video-top-home" className="video-top-home" src="/video/walking.mp4"  autoPlay></video>
+                <video id="video-top-home" className="video-top-home" src="/assets/video/walking.mp4"  autoPlay></video>
                 <div className="page-wrap">
                     <MainContentContainer page="home">
                         <div className="row row-shorter">
