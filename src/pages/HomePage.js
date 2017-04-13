@@ -18,6 +18,7 @@ export default class HomePage extends React.Component {
         super(props);
     }
     componentDidMount() {
+
         let videoPart1Handler = function() {
             if(this.currentTime >= 5) {
                 $('#video-top-home').fadeOut(6000);

@@ -25,7 +25,7 @@ let getCatsByIds =(data, ids, getFirst=true) => {
 }
 
 let getRandomSaying = () => {
-    return Sayings[Math.round(Math.random() * (Sayings.length-1))];
+    let saying = Sayings[Math.round(Math.random() * (Sayings.length-1))];
 }
 
 export  { getItemDetailsBySlug, getCatsByIds, getRandomSaying }

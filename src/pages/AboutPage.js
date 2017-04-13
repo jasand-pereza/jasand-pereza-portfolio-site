@@ -24,7 +24,6 @@ export default class AboutPage extends React.Component {
         let overlayVisible = !Cookies.get('hideAboutVideoOverlay');
         let $videoOverlay = null;
 
-        console.log(overlayVisible);
         if(overlayVisible) {
             $videoOverlay = $('#video-overlay');
             $videoOverlay[0].playbackRate = 1.5;
@@ -75,7 +74,7 @@ export default class AboutPage extends React.Component {
             <div className="tmpl-about">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
-                <video id="video-top" className="video-top " src="/assets/video/fpo-axe2.mp4"  autoPlay></video>
+                <video id="video-top" className="video-top " src="/assets/video/chopwood-small.mp4"  autoPlay></video>
 
                 
                 { // only show overlay video once unless cookies are cleared
