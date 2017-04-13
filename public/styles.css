@@ -1533,7 +1533,7 @@ h2.callout {
   padding: 10px 20px 10px 40px;
   position: relative; }
   .block-highlight:before {
-    background-image: url(/img/bg-diagonal-pattern.png);
+    background-image: url(/assets/img/bg-diagonal-pattern.png);
     background-position-x: 0;
     background-size: 460px;
     content: '';
@@ -1563,7 +1563,7 @@ h2.callout {
   color: #000000; }
 
 .block-highlight-jumbo {
-  background: url(/img/bg-diagonal-pattern.png) #313030;
+  background: url(/assets/img/bg-diagonal-pattern.png) #313030;
   padding-top: 120px;
   padding-bottom: 120px;
   width: 100%; }
