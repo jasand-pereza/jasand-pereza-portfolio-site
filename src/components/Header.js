@@ -19,6 +19,12 @@ export default class Header extends React.Component {
     }
 
     componentDidMount() {
+
+        // check if random saying already exists
+        if(!$(this.bElement).find('span').length) {
+            $(this.bElement).append(this.getRandomSaying());
+        }
+
         let $header = $('#header-main');
         let $hamburger = $('.hamburger');
         let $video = $('#video-top-home');
@@ -60,7 +66,19 @@ export default class Header extends React.Component {
         
     }
 
+    getHeaderSaying() {
+        if(typeof __PRELOADED_STATE__ != 'undefined') {
+            return __PRELOADED_STATE__.sayings.headerSaying;
+        } else {
+            return getRandomSaying();
+        }
+    }
+
     render() {
+        let saying = null;
+        if(typeof window == 'undefined') {
+            saying = getRandomSaying();
+        }
         return (
             <header id="header-main" className={'header-main ' + this.props.styleClasses}>
                 <div className="row row-shorter">
@@ -73,8 +91,8 @@ export default class Header extends React.Component {
                 </div>
                 <div className="row row-shorter">
                     <div className="small-12 columns header-random-saying">
-                        <blockquote>
-                            &ldquo;{ getRandomSaying() }&rdquo;
+                        <blockquote ref={(bElement) => { this.bElement = bElement } }>
+                            &ldquo;{ this.getHeaderSaying() }&rdquo;
                             <br/>
                             <span>Jasand&apos;s Wife</span>
                         </blockquote>

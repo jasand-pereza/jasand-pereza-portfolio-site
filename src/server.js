@@ -10,6 +10,8 @@ import routes from './pages/Routes';
 import { renderToString } from 'react-dom/server';
 import indexStatic from './indexStatic';
 
+import { getRandomSaying } from './data/DataMethods';
+
 
 // ---  begin server-side and routes code ---
 
@@ -27,7 +29,10 @@ function handleRender(req, res) {
 
     match({ routes: routes, location: req.url }, (err, redirect, props) => {
       const html = renderToString(<RouterContext {...props} />);
-      res.send(renderFullPage(html));
+
+      let headerSaying = getRandomSaying();
+      let footerSaying = getRandomSaying();
+      res.send(renderFullPage(html, { sayings: { headerSaying: headerSaying, footerSaying: footerSaying } } ));
     })
 }
 

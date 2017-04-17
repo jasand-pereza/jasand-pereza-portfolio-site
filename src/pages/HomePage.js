@@ -20,13 +20,17 @@ export default class HomePage extends React.Component {
     componentDidMount() {
 
         let videoPart1Handler = function() {
-            if(this.currentTime >= 5) {
+            if(this.currentTime >= 20) {
                 $('#video-top-home').fadeOut(6000);
                 $('#video-top-home')[0].removeEventListener('timeupdate', videoPart1Handler);
                 return;
             }
         }
         $('#video-top-home')[0].addEventListener("timeupdate", videoPart1Handler);
+        // $('#video-top-home')[0].currentTime = 3;
+        //$('#video-top-home')[0].playbackRate = 0.5;
+
+        
     }
     render() {
         let currentLocation = this.props.location.pathname;
@@ -35,7 +39,7 @@ export default class HomePage extends React.Component {
             <div className="tmpl-home">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
-                <video id="video-top-home" className="video-top-home" src="/assets/video/walking.mp4"  autoPlay></video>
+                <video id="video-top-home" className="video-top-home" src="/assets/video/workshop-injury.mp4"  autoPlay></video>
                 <div className="page-wrap">
                     <MainContentContainer page="home">
                         <div className="row row-shorter">
