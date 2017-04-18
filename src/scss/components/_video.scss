@@ -15,8 +15,8 @@
 }
 .video-top-home {
     @include transition(opacity 0.5s);
-    opacity: 0.3;
-    transform: scaleX(-1);
+    opacity: 0.4;
+    // transform: scaleX(-1);
 }
 .video-404 {
     @include transition(opacity 3s);

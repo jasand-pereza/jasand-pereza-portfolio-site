@@ -27,7 +27,7 @@ export default class HomePage extends React.Component {
             }
         }
         $('#video-top-home')[0].addEventListener("timeupdate", videoPart1Handler);
-        // $('#video-top-home')[0].currentTime = 3;
+        //  $('#video-top-home')[0].currentTime = 8;
         //$('#video-top-home')[0].playbackRate = 0.5;
 
         
@@ -39,16 +39,17 @@ export default class HomePage extends React.Component {
             <div className="tmpl-home">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
-                <video id="video-top-home" className="video-top-home" src="/assets/video/workshop-injury.mp4"  autoPlay></video>
+                <video id="video-top-home" className="video-top-home" src="/assets/video/chainsaw.mp4"  autoPlay></video>
+                {/*<img className="video-top-home" src="/assets/img/fpo-hipster-wood.jpg"/>*/}
                 <div className="page-wrap">
                     <MainContentContainer page="home">
                         <div className="row row-shorter">
                             <div className="small-12 medium-9 columns">
-                                <p className="callout">Once a graphic designer, now a full-stack code wrangler, I’m obsessed with making the web a meaningful habitat for the user and fellow developers.</p> 
+                                <p className="callout">Legend has it, he was once a graphic designer who transformed himself into a full-stack code wrangler. Today Jasand has been seen building meaningful habitats for users and fellow developers.</p> 
                                 <Spacer/>
                                 <div className="btn-box">
                                     <Button classNames="btn-yellow" url="/about"><span>View The Legend</span></Button>
-                                    <Button classNames="btn-yellow-outline" url="/work"><span>See Craft</span></Button><br/><br/>
+                                    <Button classNames="btn-yellow-outline" url="/work"><span>His Craft</span></Button><br/><br/>
                                     <Button classNames="btn-blue" url="https://www.github.com/jasand-pereza" target="_blank"><span>You&apos;re just here to see my code > </span></Button>
                                 </div>
                                 <br/>

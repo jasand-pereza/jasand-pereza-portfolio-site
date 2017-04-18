@@ -27,7 +27,7 @@ export default class Header extends React.Component {
 
         let $header = $('#header-main');
         let $hamburger = $('.hamburger');
-        let $video = $('#video-top-home');
+        let $video = $('#video-top-home, #video-top');
         let sticky = null;    
         
         let initSticky = () => {

@@ -70,7 +70,7 @@ export default class WorkPage extends React.Component {
                          <div className="row row-shorter">
                             <div className="small-12 medium-9 columns">
                                 <h1 className="htag-yellow">The Craft</h1>
-                                <p>I&apos;ve talked a bunch about how cool I am, but now it&apos;s time to live up to it. This is where I exit the room and put my ear plugs in.</p>
+                                <p>Jasand has talked a bunch about how cool he is, but now it&apos;s time for him to live up to it. This is where he exits the room and puts in his ear plugs.</p>
                             </div>
                         </div>
                         <Spacer multiplier={3}/>

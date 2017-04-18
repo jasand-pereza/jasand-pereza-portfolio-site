@@ -21,13 +21,15 @@ export default class NotFound404Page extends React.Component {
         let $video = $('#video-top-404');
 
         let videoPartHandler = function() {
-            if(this.currentTime >= 13) {
+            if(this.currentTime >= 14) {
                 $video.addClass('hidden');
                 this.removeEventListener('timeupdate', videoPartHandler);
                 return;
             }
         }
         $video[0].addEventListener("timeupdate", videoPartHandler);
+        $video[0].playbackRate = 2;
+        
     }
     render() {
         let currentLocation = this.props.location.pathname;
@@ -36,7 +38,7 @@ export default class NotFound404Page extends React.Component {
             <div className="tmpl-404">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
-                <video id="video-top-404" className="video-404 " src="/video/laptop-fire.mp4"  autoPlay></video>
+                <video id="video-top-404" className="video-404 " src="/assets/video/phone-destroy.mp4"  autoPlay></video>
                 <div className="page-wrap">
                     <MainContentContainer page="home">
                         <div className="row row-shorter">

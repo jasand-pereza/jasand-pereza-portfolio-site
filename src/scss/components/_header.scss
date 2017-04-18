@@ -1,6 +1,6 @@
 @mixin stuck-header {
     @include transition(all 0.8s);
-    background: url("/img/bg-diagonal-pattern.png") repeat;
+    background: url("/assets/img/bg-diagonal-pattern.png") repeat;
     background-color: rgba(0,0,0,0.5);
     width: 100%;
     z-index: 4;
