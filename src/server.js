@@ -9,7 +9,7 @@ import routes from './pages/Routes';
 // server-side
 import { renderToString } from 'react-dom/server';
 import indexStatic from './indexStatic';
-
+import compression from 'compression';
 import { getRandomSaying } from './data/DataMethods';
 
 
@@ -20,6 +20,10 @@ const port = process.env.PORT || 8080; // let Heroku assign a port if available
 
 //Serve static files
 app.use('/assets', Express.static('public/assets'));
+
+
+// use gzip compression for files
+app.use(compression());
 
 // This is fired every time the server side receives a request
 app.use(handleRender);
