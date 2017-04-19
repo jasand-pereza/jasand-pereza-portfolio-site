@@ -39,6 +39,8 @@ export default class HomePage extends React.Component {
             <div className="tmpl-home">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
+                
+                <img className="mobile-video-replacement" src="/assets/img/mobile-home.jpg" />
                 <video id="video-top-home" className="video-top-home" src="/assets/video/chainsaw.mp4"  autoPlay></video>
                 {/*<img className="video-top-home" src="/assets/img/fpo-hipster-wood.jpg"/>*/}
                 <div className="page-wrap">

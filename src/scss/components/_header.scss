@@ -60,6 +60,8 @@
     }
     img {
         height: auto;
+        position: relative;
+        z-index: 3;
         width: 100%;
     }
     &.stuck {

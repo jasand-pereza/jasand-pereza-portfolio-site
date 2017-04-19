@@ -74,6 +74,7 @@ export default class AboutPage extends React.Component {
             <div className="tmpl-about">
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
+                <img className="mobile-video-replacement" src="/assets/img/mobile-about.jpg" />
                 <video id="video-top" className="video-top " src="/assets/video/axe-man.mp4"  autoPlay></video>
 
                 

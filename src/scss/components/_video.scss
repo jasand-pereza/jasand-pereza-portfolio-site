@@ -12,11 +12,19 @@
     &.hidden {
         opacity: 0;
     }
+
+    @media screen and (max-width: 1190px) {
+        height: 100%;
+        width: auto;
+    }
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 }
 .video-top-home {
     @include transition(opacity 0.5s);
     opacity: 0.4;
-    // transform: scaleX(-1);
 }
 .video-404 {
     @include transition(opacity 3s);
@@ -36,5 +44,15 @@
     &.hidden {
         @include transition(all 5s);
         opacity: 0;
+    }
+}
+
+
+.mobile-video-replacement {
+    display: none;
+    margin-top: 50px;
+
+    @media screen and (max-width: 500px) {
+        display: block;
     }
 }
