@@ -25,6 +25,7 @@ app.use('/assets', Express.static('public/assets'));
 // use gzip compression for files
 app.use(compression());
 
+
 // This is fired every time the server side receives a request
 app.use(handleRender);
 
@@ -44,4 +45,5 @@ function renderFullPage(html, preloadedState={}) {
   return indexStatic(html, preloadedState, process.env.NODE_ENV);
 }
 
-app.listen(port)
+
+app.listen(port);
