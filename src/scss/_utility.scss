@@ -16,17 +16,29 @@
     position: relative;
     transform: rotate(0deg);
 }
+.ut-more-mobile-centered-width {
+    float: none;
+    margin: auto;
+    width: 85%;
+}
+.ut-stage-lighting {
+    background-image: url(/assets/img/bg-stage-lighting.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 .ut-slash {
     background-image: url(/img/slash.png);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 10%;
-    background-repeat: no-repeat;
-    z-index: 4;
     background-size: 27% 12%;
-        opacity: 0;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 10%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+
     &.show {
         opacity: 0.7;
     }

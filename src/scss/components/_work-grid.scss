@@ -105,3 +105,22 @@
     }
 }
 
+@media screen and (max-width: 499px) {
+    .work-item-categories {
+        display: none;
+    }
+    .work-item-details h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 920px) {
+    .work-item-categories {
+        font-size: 13px;
+    }
+    .work-item-details h1 {
+        font-size: 20px;
+    }
+}
+
+

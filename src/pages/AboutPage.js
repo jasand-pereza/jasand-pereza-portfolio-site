@@ -103,77 +103,81 @@ export default class AboutPage extends React.Component {
                                 </div>
                             </div>
                         </span>
-                        <Spacer/>
-                        <div className="row row-shorter">
-                            <div className="medium-9 medium-centered columns">
-                                <h2 className="callout">Mad Skills</h2>
-                                <p>Development is a broad term and you might be wondering what he specializes in. This is not a list of every buzz word but rather a list of things he does very well.</p>
-                                <div className="row collapse body-copy">
-                                    <div className="medium-6 columns">
-                                        <ul>
-                                            <li>Interactive maps</li>
-                                            <li>Laravel apps</li>
-                                            <li>Data visualization (D3.js)</li>
-                                            <li>React and Vue</li>
-                                            <li>Website animation</li>
-                                            <li>API integrations</li>
-                                        </ul>
-                                    </div>
-                                    <div className="medium-6 columns">
-                                        <ul>
-                                            <li>Composer packages</li>
-                                            <li>WordPress plugins</li>
-                                            <li>Linux server setup and security</li>
-                                            <li>Custom websites</li>
-                                        </ul>
+                        <div className="ut-stage-lighting">
+                            <Spacer/>
+                            <div className="row row-shorter">
+                                <div className="medium-9 medium-centered columns">
+                                    <h2 className="callout">Mad Skills</h2>
+                                    <p>Development is a broad term and you might be wondering what he specializes in. This is not a list of every buzz word but rather a list of things he does very well.</p>
+                                    <div className="row collapse body-copy">
+                                        <div className="medium-6 columns">
+                                            <ul>
+                                                <li>Interactive maps</li>
+                                                <li>Laravel apps</li>
+                                                <li>Data visualization (D3.js)</li>
+                                                <li>React and Vue</li>
+                                                <li>Website animation</li>
+                                                <li>API integrations</li>
+                                            </ul>
+                                        </div>
+                                        <div className="medium-6 columns">
+                                            <ul>
+                                                <li>Composer packages</li>
+                                                <li>WordPress plugins</li>
+                                                <li>Linux server setup and security</li>
+                                                <li>Custom websites</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div> 
-                        <Spacer multiplier={2}/>
+                            </div> 
+                            <Spacer multiplier={2}/>
+                        </div>
                         <div className="row">
                             <Banner image="/assets/img/tools.jpg" size="large">
                                 <p className="text-saying">When Jasand is not developing things, he&apos;s probably in the wood shop (garage) with a cold beer and make&ndash;believing he&apos;s Bob Vila. </p>
                             </Banner>
                         </div>
-                        <Spacer/>
-                        <div className="row row-shorter">
-                            <div className="medium-9 medium-centered columns">
-                                <h2 className="callout">My Stack</h2>
-                                <p>Jasand is an open source web developer, meaning he does not work with Windows based setups. So for the backbone of most projects, he uses Linux, Apache, MySQL and PHP. &#3;He occasionaly dabbles and has become more aquainted with the Node.js side of things.</p>
-                                <Spacer multiplier={2}/>
-                                <div className="row collapse">
-                                    <div className="medium-6 columns">
-                                        <span className="title-list">99.99% OF THE TIME HE USES:</span>
-                                        <ul className="list-stack">
-                                            <li><span className="block-highlight block-highlight-blue">PHP</span></li>
-                                            <li><span className="block-highlight block-highlight-blue">MySQL</span></li>
-                                            <li><span className="block-highlight block-highlight-blue">Apache</span></li>
-                                            <li><span className="block-highlight block-highlight-blue">LINUX</span></li>
-                                        </ul>
-                                    </div>
-                                     <div className="medium-6 columns">
-                                        <span className="title-list">HE IS NOW EXPERIMENTING IN:</span>
-                                        <ul className="list-stack-gray">
-                                            <li><span className="block-highlight block-highlight-blue">Node.js</span></li>
-                                            <li><span className="block-highlight block-highlight-blue">JS Framework</span></li>
-                                            <li><span className="block-highlight block-highlight-blue">Express</span></li>
-                                            <li><span className="block-highlight block-highlight-blue">Mongo</span></li>
-                                        </ul>
+                        <div className="ut-stage-lighting">
+                            <Spacer/>
+                            <div className="row row-shorter">
+                                <div className="medium-9 medium-centered columns ut-more-mobile-centered-width">
+                                    <h2 className="callout">My Stack</h2>
+                                    <p>Jasand is an open source web developer, meaning he does not work with Windows based setups. So for the backbone of most projects, he uses Linux, Apache, MySQL and PHP. &#3;He occasionaly dabbles and has become more aquainted with the Node.js side of things.</p>
+                                    <Spacer multiplier={2}/>
+                                    <div className="row collapse">
+                                        <div className="medium-6 columns">
+                                            <span className="title-list">99.99% OF THE TIME HE USES:</span>
+                                            <ul className="list-stack">
+                                                <li><span className="block-highlight block-highlight-blue">PHP</span></li>
+                                                <li><span className="block-highlight block-highlight-blue">MySQL</span></li>
+                                                <li><span className="block-highlight block-highlight-blue">Apache</span></li>
+                                                <li><span className="block-highlight block-highlight-blue">LINUX</span></li>
+                                            </ul>
+                                        </div>
+                                        <div className="medium-6 columns">
+                                            <span className="title-list">HE IS NOW EXPERIMENTING IN:</span>
+                                            <ul className="list-stack-gray">
+                                                <li><span className="block-highlight block-highlight-blue">Node.js</span></li>
+                                                <li><span className="block-highlight block-highlight-blue">JS Framework</span></li>
+                                                <li><span className="block-highlight block-highlight-blue">Express</span></li>
+                                                <li><span className="block-highlight block-highlight-blue">Mongo</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <Spacer/>
-                        <div className="row row-shorter">
-                            <div className="medium-9 medium-centered columns">
-                                <h2 className="callout">Evidence – He has the rings in his tree trunk to prove it (Absolutley no pun intended)</h2>
-                                <p>What good would the latter be if he just spat out a bunch of buzzwords without anything to back it.</p>
-                                <br/>
-                                <Button classNames="btn-yellow-outline" url="/work">See the work</Button>
+                            <Spacer/>
+                            <div className="row row-shorter">
+                                <div className="medium-9 medium-centered columns ut-more-mobile-centered-width">
+                                    <h2 className="callout">Evidence – He has the rings in his tree trunk to prove it (Absolutley no pun intended)</h2>
+                                    <p>What good would the latter be if he just spat out a bunch of buzzwords without anything to back it.</p>
+                                    <br/>
+                                    <Button classNames="btn-yellow-outline" url="/work">See the work</Button>
+                                </div>
                             </div>
+                            <Spacer multiplier={3}/>
                         </div>
-                        <Spacer multiplier={3}/>
                     </MainContentContainer>
                 </div>
                 <div className="row">

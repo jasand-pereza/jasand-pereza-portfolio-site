@@ -12,8 +12,8 @@ const Footer = ({children}) => {
                         <div className="medium-6 columns">
                             <h3>Connect</h3>
                             <ul className="ut-unlist social-links">
-                                <li><a href="http://www.facebook.com/jasand-pereza-developer" className="icon-facebook2"></a></li>
-                                <li><a href="http://www.github.com/jasand-pereza" className="icon-github"></a></li>
+                                <li><a href="https://www.linkedin.com/in/jasand-pereza/" className="icon-linkedin" target="_blank"></a></li>
+                                <li><a href="http://www.github.com/jasand-pereza" className="icon-github" target="_blank"></a></li>
                                 <li><a href="mailto:hello@jasandpereza.com?subject=Inquiry%20from%20jasandpereza.com" target="_blank" className="icon-envelop"></a></li>
                             </ul>
                         </div>

@@ -135,3 +135,9 @@
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .header-main.overlay-exposed .nav-main ul {
+        left: 19%;
+    }
+}

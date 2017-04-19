@@ -1,29 +1,40 @@
-.list-stack {
-    padding-left: 0;
 
-    span {
-        @include font_title;
-        color: $black;
-        margin-bottom: 20px;
-        padding: 5px 20px 0px 40px;
-        text-transform: uppercase;
-        text-align: center;
-        width: 90%;
-    }
+.tmpl-about {
+    .list-stack {
+        padding-left: 0;
 
-    @media screen and (max-width: 799px) {
         span {
-            width: 100%;
+            @include font_title;
+            color: $black;
+            margin-bottom: 20px;
+            padding: 5px 20px 0px 40px;
+            text-transform: uppercase;
+            text-align: center;
+            width: 90%;
+        }
+
+        @media screen and (max-width: 799px) {
+            span {
+                width: 100%;
+            }
         }
     }
-}
-.list-stack-gray {
-    @extend .list-stack;
-    span {
-        background: $medium-gray;
+    .list-stack-gray {
+        @extend .list-stack;
+        span {
+            background: $medium-gray;
+        }
     }
-}
-.page-content-top {
-    position: relative;
-    z-index: 2;
+    .page-content-top {
+        position: relative;
+        z-index: 2;
+    }
+
+    @media screen and(min-width: 639px) and (max-width: 799px) {
+        .ut-more-mobile-centered-width {
+            .medium-6 {
+                padding-right: 10px;
+            }
+        }
+    }
 }
