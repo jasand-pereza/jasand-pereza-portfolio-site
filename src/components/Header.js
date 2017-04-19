@@ -20,6 +20,11 @@ export default class Header extends React.Component {
 
     componentDidMount() {
 
+        if ('scrollRestoration' in history) {
+             history.scrollRestoration = 'auto';
+        }
+
+
         // check if random saying already exists
         if(!$(this.bElement).find('span').length) {
             $(this.bElement).append(this.getRandomSaying());
@@ -83,7 +88,11 @@ export default class Header extends React.Component {
             <header id="header-main" className={'header-main ' + this.props.styleClasses}>
                 <div className="row row-shorter">
                     <div className="medium-9 columns">
-                        <h1><img src="/assets/img/logo.png"/></h1>
+                        {
+                            (this.props.currentLocation != '/') 
+                                ? <a href="/"><h1><img src="/assets/img/logo.png"/></h1></a>
+                                : <h1><img src="/assets/img/logo.png"/></h1>
+                        }
                     </div>
                     <div className="medium-3 columns">
                         <MainNav currentLocation={this.props.currentLocation}/>
