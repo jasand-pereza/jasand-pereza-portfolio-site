@@ -16,7 +16,7 @@ const MainNav = ({ currentLocation }) => {
                 <li className={getActiveClass('/work', currentLocation)}><Link to="/work">See His Work</Link></li>
                 <li><a href="https://vimeo.com/140548770" target="_blank">2:20 Reel</a></li>
                 {/*<li className={getActiveClass('/contact', currentLocation)}><Link to="/contact">Telegram</Link></li>*/}
-                <li><a href="mailto:mail@jasandpereza.com?subject=Inquiry%20from%20jasandpereza.com" target="_blank">Telegram</a></li>
+                <li><a href="mailto:hello@jasandpereza.com?subject=Inquiry%20from%20jasandpereza.com" target="_blank">Telegram</a></li>
                 <li><a href="http://www.github.com/jasand-pereza" target="_blank">GitHub</a></li>
             </ul>
         </nav>

@@ -14,7 +14,7 @@ const Footer = ({children}) => {
                             <ul className="ut-unlist social-links">
                                 <li><a href="http://www.facebook.com/jasand-pereza-developer" className="icon-facebook2"></a></li>
                                 <li><a href="http://www.github.com/jasand-pereza" className="icon-github"></a></li>
-                                <li><a href="mailto:mail@jasandpereza.com?subject=Inquiry%20from%20jasandpereza.com" target="_blank" className="icon-envelop"></a></li>
+                                <li><a href="mailto:hello@jasandpereza.com?subject=Inquiry%20from%20jasandpereza.com" target="_blank" className="icon-envelop"></a></li>
                             </ul>
                         </div>
                         <div className="medium-6 columns">
@@ -23,7 +23,7 @@ const Footer = ({children}) => {
                                     <li><Link to="/">Home</Link></li>
                                     <li><Link to="/about">About</Link></li>
                                     <li><Link to="/work">Work</Link></li>
-                                    <li><a href="mailto:mail@jasandpereza.com?subject=Inquiry%20from%20jasandpereza.com" target="_blank">Contact</a></li>
+                                    <li><a href="mailto:hello@jasandpereza.com?subject=Inquiry%20from%20jasandpereza.com" target="_blank">Contact</a></li>
                                 </ul>
                             </nav>
                             <br/>

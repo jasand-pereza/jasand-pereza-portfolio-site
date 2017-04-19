@@ -50,7 +50,7 @@ export default class HomePage extends React.Component {
                                 <div className="btn-box">
                                     <Button classNames="btn-yellow" url="/about"><span>View The Legend</span></Button>
                                     <Button classNames="btn-yellow-outline" url="/work"><span>His Craft</span></Button><br/><br/>
-                                    <Button classNames="btn-blue" url="https://www.github.com/jasand-pereza" target="_blank"><span>You&apos;re just here to see my code > </span></Button>
+                                    <Button classNames="btn-blue" url="https://www.github.com/jasand-pereza" target="_blank"><span>You&apos;re just here to see some code > </span></Button>
                                 </div>
                                 <br/>
                                 <br/>
