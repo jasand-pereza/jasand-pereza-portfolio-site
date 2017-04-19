@@ -18,7 +18,7 @@ import { getRandomSaying } from './data/DataMethods';
 const app = Express()
 const port = process.env.PORT || 8080; // let Heroku assign a port if available
 
-app.use(compression({ threshold: 0 }));
+app.use(compression());
 
 //Serve static files
 app.use('/assets', Express.static('public/assets'));
