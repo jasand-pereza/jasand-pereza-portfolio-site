@@ -40,7 +40,7 @@ const Footer = ({children}) => {
             <Spacer multiplier={3}/>
             <div className="row row-shorter">
                 <div className="small-12 columns">
-                    <span>&copy;2017 Jasandpereza.com</span>
+                    <span>&copy;2017 Jasandpereza.com &nbsp;&nbsp;|&nbsp;&nbsp; crafted by hand with  <img style={{ width: '80px', height: 'auto' }}src="/assets/img/logo-react.png" /></span>
                      <Spacer/>
                 </div>
                 

@@ -64,6 +64,11 @@ let DataWorkGrid = {
                     title: 'Member directory – interactive map',
                     caption: 'Member directory – interactive map'
                 },
+                {
+                    src: 'fireadaptednetwork-3.jpg',
+                    title: 'Member Profile – Edit',
+                    caption: 'Member Profile – Edit'
+                },
             ],
             categories: [1,3]
         },
