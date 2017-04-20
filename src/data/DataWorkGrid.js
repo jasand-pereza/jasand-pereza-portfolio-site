@@ -41,7 +41,7 @@ let DataWorkGrid = {
                 },
                 
             ],
-            categories: [1]
+            categories: [1,2]
         },
         {
             slug: 'fire-adapted-network',
@@ -82,7 +82,7 @@ let DataWorkGrid = {
             order: 2,
             thumbSrc: 'ntt-data-healthcare-thumb-2.jpg',
             images: null,
-            categories: [1]
+            categories: [1,2]
         },
         {
             slug: 'jasand-pereza-reel',
