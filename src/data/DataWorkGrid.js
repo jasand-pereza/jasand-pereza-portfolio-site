@@ -114,6 +114,16 @@ let DataWorkGrid = {
                     src: 'jackfrost-1.jpg',
                     title: 'Screenshot of the digital holiday card',
                     caption: 'Screenshot of the digital holiday card'
+                },
+                {
+                    src: 'jackfrost-3.jpg',
+                    title: 'Outdoor shot',
+                    caption: 'Outdoor shot'
+                },
+                {
+                    src: 'jackfrost-2.jpg',
+                    title: 'Photoshop pre-flash illustration',
+                    caption: 'Photoshop pre-flash illustration'
                 }
             ]
         },
@@ -201,11 +211,26 @@ let DataWorkGrid = {
         {
             slug: 'city-of-boulder-zero-waste-microsite',
             title: 'Zero Waste – City of Boulder',
+            publish: true,
+            link: 'https://bouldercolorado.gov/zero-waste',
             body: null,
             tileShow: true,
             order: 3,
             thumbSrc: 'city-of-boulder-thumb.jpg',
-            images: null,
+            images: [
+                {
+                    src: 'boulder-zero-waste-1.mp4',
+                    isAutoPlayVideo: true
+                },
+                {
+                    src: 'boulder-zero-waste-3.mp4',
+                    isAutoPlayVideo: true
+                },
+                {
+                    src: 'boulder-zero-waste-2.mp4',
+                    isAutoPlayVideo: true
+                }
+            ],
             categories: [1]
         },
         {

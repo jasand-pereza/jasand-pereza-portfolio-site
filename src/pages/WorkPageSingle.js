@@ -28,11 +28,21 @@ export default class WorkPageSingle extends React.Component {
                 </div>
             );
         }
+         if(typeof this.props.workItem.isAutoPlayVideo != 'undefined') {
+            return (
+                <div className="row row-shorter">
+                    <div className="medium-9 columns">
+                        <video src={'/assets/img/work' + workImage.src} autoplay />
+                        <Spacer/>
+                    </div>
+                </div>
+            );
+        }
         return this.props.workItem.images.map((workImage, i) => {
             return (
                 <div className="row row-shorter" key={i}>
                     <div className="medium-9 columns">
-                        <img src={ '/assets/img/work/' + workImage.src } alt={ workImage.title } title={ workImage.title } />
+                        {this.renderImgOrAutoPlayVideo(workImage)})
                         <p>{ workImage.caption }</p>
                          <Spacer/>
                     </div>
@@ -40,6 +50,18 @@ export default class WorkPageSingle extends React.Component {
             );
         });
     }
+    rewindAndPlay(e) {
+        let video = e.target;
+        video.currentFrame = 0;
+        video.play();
+    }
+    renderImgOrAutoPlayVideo(workImage) {
+        if(typeof workImage.isAutoPlayVideo != 'undefined') {
+            return (<video className="video-autoplay" src={'/assets/img/work/' + workImage.src} onMouseLeave={(e) => {e.target.pause()}} onClick={this.rewindAndPlay} onMouseOver={this.rewindAndPlay} autoPlay={true} loop={false} muted={true} />);
+        } 
+        return(<img src={ '/assets/img/work/' + workImage.src } alt={ workImage.title } title={ workImage.title } />);   
+    }
+
     render() {
         return (
             <div>
