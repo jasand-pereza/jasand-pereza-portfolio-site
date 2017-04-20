@@ -95,24 +95,45 @@ let DataWorkGrid = {
         {
             slug: 'ntt-data-holiday-card',
             title: 'NTT DATA Holiday Card',
-            body: null,
+            body: 'NTT DATA needed a holiday card to be sent out internally to their employees. Developed in flash with original photography and illustrations, these animations tell a story of how multiple comapnies came together to form NTT DATA.',
             publish: true,
             tileShow: true,
+            link: 'https://vimeo.com/200536929',
             order: 3,
             thumbSrc: 'jackfrost-thumb.jpg',
             isThumbDark: true,
             images: null,
-            categories: [1,2,6,7]
+            categories: [1,2,6,7],
+            images: [
+                {
+                    src: 'jackfrost-1.jpg',
+                    title: 'Screenshot of the digital holiday card',
+                    caption: 'Screenshot of the digital holiday card'
+                }
+            ]
         },
         {
             slug: 'deans-for-impact',
             title: 'Deans for Impact Website',
-            body: null,
+            link: 'https://www.deansforimpact.org',
+            body: '"Deans for Impact is committed to transforming educator preparation and elevating the teaching profession." – Deans for Impact',
+            publish: true,
             tileShow: true,
             order: 3,
             isThumbDark: true,
             thumbSrc: 'deansforimpact-thumb.jpg',
-            images: null,
+            images: [
+                {
+                    src: 'deansforimpact-1.jpg',
+                    title: 'Homepage',
+                    caption: 'Homepage with video auto playing the background'
+                },
+                {
+                    src: 'deansforimpact-2.jpg',
+                    title: 'Staff Page',
+                    caption: 'Staff Page'
+                }
+            ],
             categories: [1]
         },
         {
@@ -142,7 +163,7 @@ let DataWorkGrid = {
             title: 'Spaces Real Estate Website',
             publish: true,
             tileShow: true,
-            body: 'The client needed a website that stood out from other Real Estate websites. It had to be modern, exhibit personality and integrate with MLS listings. We built the theme from scratch using using beautifully designed comps, and in the end, an impressive site was launched.',
+            body: 'The client needed a website that stood out from other Real Estate websites. It had to be modern, exhibit personality, and integrate with MLS listings. We built the theme from scratch using using beautifully designed comps, and in the end, an impressive site was launched.',
             order: 3,
             thumbSrc: 'yourspaces-thumb.jpg',
             link: 'http://yourspaces.com',
@@ -158,11 +179,18 @@ let DataWorkGrid = {
         {
             slug: 'door-to-door-organics-app',
             title: 'Door to Door Organics How it Works App',
-            body: null,
+            body: 'This is a parallax Facebook scrolling app that animates to show how the company’s process works.',
+            publish: true,
             order: 3,
             tileShow: true,
             thumbSrc: 'dtdo-thumb.jpg',
-            images: null,
+            images: [
+                {
+                    src: 'welcome-app-1.jpg',
+                    title: 'Welcome App',
+                    caption: ''
+                }
+            ],
             categories: [1]
         },
         {
@@ -178,11 +206,23 @@ let DataWorkGrid = {
         {
             slug: 'campaign-for-action',
             title: 'Campaign for Action Website',
-            body: null,
+            publish: true,
+            body: 'This site was built with the goal to help transform health care through nursing. Using only WordPress as a CMS, the backend was extended heavily to allow multiple user roles to collaborate and create content for the nation as a whole, and per state.',
             order: 3,
             tileShow: true,
             thumbSrc: 'ccna-thumb.jpg',
-            images: null,
+            images: [
+                {
+                    src: 'campaignforaction-1.jpg',
+                    title: 'Homepage',
+                    caption: 'Homepage'
+                },
+                {
+                    src: 'campaignforaction-2.jpg',
+                    title: 'Resource Library',
+                    caption: 'Searchable Resource Library '
+                }
+            ],
             categories: [1]
         },
         {
@@ -199,10 +239,27 @@ let DataWorkGrid = {
             slug: 'climate-voices-website',
             title: 'Climate Voices Website',
             tileShow: true,
-            body: null,
+            publish: true,
+            body: 'Climate Voices acts a hub for climate scientists all over the United States to connect as well as for the general public to seek out speakers for talks/presentations. ',
             order: 3,
             thumbSrc: 'climate-voices-thumb.jpg',
-            images: null,
+            images: [
+                {
+                    src: 'climate-voices-1.jpg',
+                    title: 'Homepage',
+                    caption: 'Homepage'
+                },
+                {
+                    src: 'climate-voices-2.jpg',
+                    title: 'Map and Speaker Database',
+                    caption: 'Map and Speaker Database'
+                },
+                {
+                    src: 'climate-voices-3.jpg',
+                    title: 'Speaker profile page',
+                    caption: 'Speaker profile page'
+                }
+            ],
             categories: [1,3]
         },
         {

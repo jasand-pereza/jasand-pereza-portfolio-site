@@ -24,7 +24,7 @@
 }
 .video-top-home {
     @include transition(opacity 0.5s);
-    opacity: 0.4;
+    opacity: 0.5;
 }
 .video-404 {
     @include transition(opacity 3s);
@@ -32,7 +32,7 @@
 }
 .video-top {
     @include transition(opacity 3s);
-    opacity: 0.4;
+    opacity: 0.5;
 }
 .video-overlay {
     width: 100%;

@@ -99,7 +99,7 @@ export default class AboutPage extends React.Component {
                         <span className="block-highlight block-highlight-gun-metal block-highlight-jumbo">
                             <div className="row row-shorter collapse">
                                 <div className="small-12 columns">
-                                    While his experience as a developer grew, so did his tool bet, and that hasn’t stopped. Jasand is constantly learning new things, so whenever he was met with a new task, there was a tool and the knowledge to use it.
+                                    While his experience as a developer grew, so did his tool belt, and that hasn’t stopped. Jasand is constantly learning new things. So whenever he is met with a new task, there is a tool and the knowledge to use it.
                                 </div>
                             </div>
                         </span>
@@ -170,7 +170,7 @@ export default class AboutPage extends React.Component {
                             <Spacer/>
                             <div className="row row-shorter">
                                 <div className="medium-9 medium-centered columns ut-more-mobile-centered-width">
-                                    <h2 className="callout">Evidence – He has the rings in his tree trunk to prove it (Absolutley no pun intended)</h2>
+                                    <h2 className="callout">Evidence</h2>
                                     <p>What good would the latter be if he just spat out a bunch of buzzwords without anything to back it.</p>
                                     <br/>
                                     <Button classNames="btn-yellow-outline" url="/work">See the work</Button>
