@@ -19,7 +19,7 @@ p, strong, b, h1 {
     color: #FFF;
 }
 .row {
-    max-width: $max_width_row;
+    max-width: none;
 }
 .row-shorter {
     max-width: $max_width_row_shorter;

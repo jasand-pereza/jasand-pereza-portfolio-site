@@ -57,7 +57,7 @@ export default class WorkPageSingle extends React.Component {
     }
     renderImgOrAutoPlayVideo(workImage) {
         if(typeof workImage.isAutoPlayVideo != 'undefined') {
-            return (<video className="video-autoplay" src={'/assets/img/work/' + workImage.src} onMouseLeave={(e) => {e.target.pause()}} onClick={this.rewindAndPlay} onMouseOver={this.rewindAndPlay} autoPlay={true} loop={false} muted={true} />);
+            return (<video className="video-autoplay" src={'/assets/img/work/' + workImage.src} preload={true} onMouseLeave={(e) => {e.target.pause()}} onClick={this.rewindAndPlay} onMouseOver={this.rewindAndPlay} autoPlay={true} loop={false} muted={true} />);
         } 
         return(<img src={ '/assets/img/work/' + workImage.src } alt={ workImage.title } title={ workImage.title } />);   
     }

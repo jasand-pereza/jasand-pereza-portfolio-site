@@ -196,14 +196,14 @@ let DataWorkGrid = {
             title: 'Door to Door Organics How it Works App',
             body: 'This is a parallax Facebook scrolling app that animates to show how the company’s process works.',
             publish: true,
+            link: 'https://doortodoororganicssocial.com',
             order: 3,
             tileShow: true,
             thumbSrc: 'dtdo-thumb.jpg',
             images: [
                 {
-                    src: 'welcome-app-1.jpg',
-                    title: 'Welcome App',
-                    caption: ''
+                    src: 'welcome-app.mp4',
+                    isAutoPlayVideo: true
                 }
             ],
             categories: [1]
