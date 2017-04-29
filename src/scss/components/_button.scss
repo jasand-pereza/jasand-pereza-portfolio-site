@@ -18,21 +18,170 @@
     margin-left: 10px;
 }
 .button, .btn-yellow {
-    background: $yellow;
     border: solid $yellow 2px;
     color: $black;
 }
+@mixin draw-block-before($color: $blue) {
+    display: none;
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background-color: $color;
+    left: -1px;
+    top: -1px;
+}
+@mixin draw-block-after() {
+    content: '';
+    padding: 7px 20px 7px 20px;
+    display: block;
+    width: calc(100%);
+    height: calc(100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 .btn-yellow-outline {
     background: transparent;
     border: solid $yellow 2px;
     color: $yellow;
+    position: relative;
+
+    &:before {
+        @include draw-block-before($yellow);
+    }
+     &:after {
+        @include draw-block-after();
+    }
+    &:hover {
+        border: solid 2px transparent;
+        @include transition(all, 1s);
+        
+        &:before {
+            display: block;
+            -webkit-animation: follow-border 0.3s reverse;
+            opacity: 0;
+            @include transition(all, 5s);
+        }
+         &:after {
+            -webkit-animation: draw-border-yellow 0.5s reverse;
+            @include transition(all, 1s);
+        }
+    }
 }
+
+
+// @-webkit-keyframes draw-down {
+//     25% {
+//         border-top-color: transparent;
+//     }
+//     50% {
+//         border-top-color: transparent;
+//         border-left-color: transparent;
+//         border-right-color: transparent;
+        
+//     }
+//     100% {
+//         border-top-color: transparent;
+//         border-left-color: transparent;
+//         border-right-color: transparent;
+//         border-bottom-color: transparent;
+//     }
+// }
+
+
+@mixin button-maker($color-name, $color: $color) {
+    background: $color;
+    border: solid 2px $color;
+    position: relative;
+    @include transition(all, 0.2s);
+    &:before {
+        @include draw-block-before($color);
+    }
+    &:after {
+        @include draw-block-after;
+    }
+    &:hover {
+        background-color: transparent;
+        color: $color;
+        border: solid 2px transparent;
+        @include transition(all, 0.2s);
+        &:after {
+            -webkit-animation: draw-border-#{$color-name} 3s forwards;
+            @include transition(all, 0.1s);
+        }
+    }
+    &:hover:before {
+        display: block;
+        -webkit-animation: follow-border 1s; 
+    }
+}
+
 .btn-blue {
-    background: $blue;
-    border: solid $blue 2px;
+    @include button-maker(blue, $blue);
 }
+
+.btn-yellow {
+   @include button-maker(yellow, $yellow);
+}
+
 .btn-blue-outline {
     background: transparent;
     border: solid $blue 2px;
     color: $blue;
+}
+@mixin draw-border-maker($color-name, $color) {
+    @-webkit-keyframes draw-border-#{$color-name} {
+        25% {
+            border-top: solid 2px $color;
+        }
+        50% {
+            border-top: solid 2px $color;
+            border-right: solid 2px $color;
+        }
+        75% {
+            border-top: solid 2px $color;
+            border-right: solid 2px $color;
+            border-bottom: solid 2px $color;
+        }   
+        100% {
+            border-top: solid 2px $color;
+            border-right: solid 2px $color;
+            border-bottom: solid 2px $color;
+            border-left: solid 2px $color;
+        }
+    }
+}
+
+@include draw-border-maker(blue, $blue);
+@include draw-border-maker(yellow, $yellow);
+
+@-webkit-keyframes follow-border {
+
+  25% {
+    opacity: 1;
+    left: 100%;
+    top: -1px;
+  }
+  50% {
+    opacity: 1;
+    left: 100%;
+    top: 100%;
+  }
+  75% {
+    opacity: 1;
+    left: -1px;
+    top: 100%;
+  }   
+  99% {
+      opacity: 1;
+      left: -1px;
+      top: -1px;
+  }
+  100% {
+      opacity: 0;
+      left: -1px;
+      top: -1px;
+  }
 }
