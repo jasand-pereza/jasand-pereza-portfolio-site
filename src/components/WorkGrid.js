@@ -20,7 +20,7 @@ export default class WorkGrid extends React.Component {
             if(item.tileShow === false) return null;
 
             if(typeof item.publish == 'undefined' && item.publish !== true) return;
-
+            
             let isDarkClassString = '';
             if(typeof item.isThumbDark != 'undefined') {
                 if(item.isThumbDark == true) {
@@ -38,6 +38,14 @@ export default class WorkGrid extends React.Component {
                 </div>
             );
         });
+        if(typeof this.props.random) {
+            items = items.sort(() => {
+                return 0.5 - Math.random(); 
+            });
+        }
+        if(typeof this.props.number != 'undefined') {
+            items = items.slice(0, 4);
+        }
         return(
             <div className="work-grid collapse row small-up-2 medium-up-4">
                 {items}

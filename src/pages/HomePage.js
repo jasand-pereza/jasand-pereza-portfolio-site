@@ -12,15 +12,22 @@ import Spacer from './../components/Spacer';
 import Slider from './../components/Slider';
 import Button from './../components/Button';
 
+import WorkGrid from './../components/WorkGrid';
+import DataWorkGrid from './../data/DataWorkGrid';
 
 export default class HomePage extends React.Component {
     constructor(props) {
         super(props);
     }
+     componentWillMount() {
+        this.setState({
+            dataWorkGrid: Object.assign({}, DataWorkGrid)
+        });
+    }
     componentDidMount() {
 
         let videoPart1Handler = function() {
-            if(this.currentTime >= 20) {
+            if(this.currentTime >= 11) {
                 $('#video-top-home').fadeOut(6000);
                 $('#video-top-home')[0].removeEventListener('timeupdate', videoPart1Handler);
                 return;
@@ -60,6 +67,15 @@ export default class HomePage extends React.Component {
                             </div>
                         </div>
                         <Spacer multiplier={4}/>
+                        <WorkGrid data={this.state.dataWorkGrid} number={1} random={true} />
+                        <Spacer multiplier={3}/>
+                        <div className="row">
+                            <div className="small-12" style={{ textAlign: 'center'}}>
+                                <p className="callout">Like what you see?</p>
+                                <Button classNames="btn-yellow" url="/work" ><span>See All Work </span></Button>
+                            </div>
+                        </div>
+                        <Spacer multiplier={3}/>
                         <div className="row">
                             <Slider isSingle={true}></Slider>
                         </div>
