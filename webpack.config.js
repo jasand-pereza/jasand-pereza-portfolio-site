@@ -1,3 +1,5 @@
+// combine dev and prod configs
+
 function buildConfig(env='base') {
   if(env === 'dev') {
     env = 'base';
