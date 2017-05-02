@@ -105,11 +105,11 @@
 }
 
 .btn-blue {
-    @include button-maker(blue, $blue);
+    @include button-maker('blue', $blue);
 }
 
 .btn-yellow {
-   @include button-maker(yellow, $yellow);
+   @include button-maker('yellow', $yellow);
 }
 
 .btn-blue-outline {
@@ -152,8 +152,8 @@
     }
 }
 
-@include draw-border-maker(blue, $blue);
-@include draw-border-maker(yellow, $yellow);
+@include draw-border-maker('blue', $blue);
+@include draw-border-maker('yellow', $yellow);
 
 @keyframes follow-border {
 
