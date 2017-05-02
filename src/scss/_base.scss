@@ -42,3 +42,19 @@ p, strong, b, h1 {
         padding-right: 1.625rem;
     }
 }
+.overlay-transition {
+    content: '';
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 0;
+    background-color: $black;
+    @include transition(opacity, 1s);
+    
+    &.trans-active {
+        opacity: 1;
+        @include transition(opacity, 1s);
+    }
+}

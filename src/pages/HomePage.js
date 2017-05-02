@@ -11,16 +11,17 @@ import MainContentContainer from './../containers/MainContentContainer';
 import Spacer from './../components/Spacer';
 import Slider from './../components/Slider';
 import Button from './../components/Button';
-
 import WorkGrid from './../components/WorkGrid';
 import DataWorkGrid from './../data/DataWorkGrid';
+
+
 
 export default class HomePage extends React.Component {
     constructor(props) {
         super(props);
     }
      componentWillMount() {
-        this.setState({
+         this.setState({
             dataWorkGrid: Object.assign({}, DataWorkGrid)
         });
     }

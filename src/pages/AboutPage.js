@@ -142,7 +142,7 @@ export default class AboutPage extends React.Component {
                             <Spacer/>
                             <div className="row row-shorter">
                                 <div className="medium-9 medium-centered columns ut-more-mobile-centered-width">
-                                    <h2 className="callout">My Stack</h2>
+                                    <h2 className="callout">His Stack</h2>
                                     <p>Jasand is an open source web developer, meaning he does not work with Windows based setups. So for the backbone of most projects, he uses Linux, Apache, MySQL and PHP. &#3;He occasionaly dabbles and has become more aquainted with the Node.js side of things.</p>
                                     <Spacer multiplier={2}/>
                                     <div className="row collapse">

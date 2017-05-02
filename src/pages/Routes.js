@@ -14,7 +14,7 @@ import NotFound404Page from './NotFound404Page';
 module.exports = (
     <div>
         <Route exact path="/" component={HomePage}/>
-        <Route path="/about" component={AboutPage}/>
+        <Route name="about" path="/about" component={AboutPage}/>
         <Route path="/work" component={WorkPage}/>
         <Route path="/work/:workSlug" component={WorkPageSingleContainer}/>
         <Route path="*" component={NotFound404Page}/>
