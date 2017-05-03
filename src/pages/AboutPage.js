@@ -19,7 +19,7 @@ export default class AboutPage extends React.Component {
         super(props);
     }
     handleVideo() {
-        let $video = $('#video-top');        
+        let $video = $('#video-top');  
         $video[0].playbackRate = 2.0;
         let overlayVisible = false; //!Cookies.get('hideAboutVideoOverlay');
         let $videoOverlay = null;
@@ -75,7 +75,7 @@ export default class AboutPage extends React.Component {
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
                 <img className="mobile-video-replacement" src="/assets/img/mobile-about.jpg" />
-                <video id="video-top" className="video-top " src="/assets/video/axe-man.mp4"  autoPlay></video>
+                <video id="video-top" className="video-top " src="/assets/video/axe-man.mp4"></video>
 
                 
                 { // only show overlay video once unless cookies are cleared

@@ -20,13 +20,13 @@ export default class HomePage extends React.Component {
     constructor(props) {
         super(props);
     }
-     componentWillMount() {
+    componentWillMount() {
          this.setState({
             dataWorkGrid: Object.assign({}, DataWorkGrid)
         });
     }
     componentDidMount() {
-
+        
         let videoPart1Handler = function() {
             if(this.currentTime >= 11) {
                 $('#video-top-home').fadeOut(6000);
@@ -44,12 +44,14 @@ export default class HomePage extends React.Component {
         let currentLocation = this.props.location.pathname;
 
         return (
+   
             <div className="tmpl-home">
+  
                 <Spacer/>
                 <Header currentLocation={currentLocation}/>
                 
                 <img className="mobile-video-replacement" src="/assets/img/mobile-home.jpg" />
-                <video id="video-top-home" className="video-top-home" src="/assets/video/chainsaw.mp4"  autoPlay></video>
+                <video id="video-top-home" className="video-top-home" src="/assets/video/chainsaw.mp4"></video>
                 {/*<img className="video-top-home" src="/assets/img/fpo-hipster-wood.jpg"/>*/}
                 <div className="page-wrap">
                     <MainContentContainer page="home">
