@@ -24,51 +24,52 @@ export default class Header extends React.Component {
              history.scrollRestoration = 'auto';
         }
 
-
         // check if random saying already exists
         if(!$(this.bElement).find('span').length) {
             $(this.bElement).append(this.getRandomSaying());
         }
 
-        let $header = $('#header-main');
-        let $hamburger = $('.hamburger');
-        let $video = $('#video-top-home, #video-top');
-        let sticky = null;    
-        
-        let initSticky = () => {
-            sticky = new Waypoint.Sticky({ 
-                element: $header[0], 
-                offset: '-200px',
-                handler(direction) {
-                    
-                    if(direction === 'up') {
-                        $header.addClass('digesting');
-                        $header.removeClass('overlay-exposed');
-                        $hamburger.removeClass('is-active');
-                        $video.removeClass('hidden');
-                    } else {
-                        $video.addClass('hidden');
-                        $header.removeClass('digesting');
+        setTimeout(function() { // this prevents a bug where if there is a delay in routing, waypoints won't work
+            let $header = $('#header-main');
+            let $hamburger = $('.hamburger');
+            let $video = $('#video-top-home, #video-top');
+            let sticky = null;    
+            
+            let initSticky = () => {
+                sticky = new Waypoint.Sticky({ 
+                    element: $header[0], 
+                    offset: '-200px',
+                    handler(direction) {
+                        if(direction === 'up') {
+                            $header.addClass('digesting');
+                            $header.removeClass('overlay-exposed');
+                            $hamburger.removeClass('is-active');
+                            $video.removeClass('hidden');
+                        } else {
+                            $video.addClass('hidden');
+                            $header.removeClass('digesting');
+                        }
                     }
-                }
-            });
-        }
-
-        let checkSticky = () => {
-            if($(window).width() >= 800) {
-                if(sticky === null) {
-                    initSticky();
-                }
-            }  else if($(window).width() <= 799) {
-                if(sticky !== null) {
-                    sticky.destroy();
-                }
-                sticky = null;
+                });
             }
-        }
-        checkSticky();
-        $(window).resize(checkSticky);
-        
+
+            let checkSticky = () => {
+                if($(window).width() >= 800) {
+                    if(sticky === null) {
+                        initSticky();
+                    }
+                }  else if($(window).width() <= 799) {
+                    if(sticky !== null) {
+                        sticky.destroy();
+                    }
+                    sticky = null;
+                }
+            }
+            checkSticky();
+            $(window).resize(checkSticky);
+            
+        }, 2000)
+       
     }
 
     getHeaderSaying() {
@@ -85,7 +86,7 @@ export default class Header extends React.Component {
             saying = getRandomSaying();
         }
         return (
-            <header id="header-main" className={'header-main ' + this.props.styleClasses}>
+            <header id="header-main" className="header-main">
                 <div className="row row-shorter">
                     <div className="medium-9 columns">
                         {
