@@ -112,47 +112,40 @@ p, strong, b, h1 {
         -webkit-transform: translateZ(0);
     }
 }
-.trans-above {
-    .trans-top {
-        background-color: $yellow;
+.trans-above.trans-top {
+    background-color: $yellow;
+    @include transition(height, 0.5s);
+    &.present {
+        height: 1000px;
         @include transition(height, 0.5s);
-        &.present {
-            height: 1000px;
-            @include transition(height, 0.5s);
-        }
     }
 }
 
-.trans-above-dark {
-    .trans-top {
-        background-color: $medium_gray;
+.trans-above-dark.trans-top {
+    background-color: $medium_gray;
+    @include transition(height, 0.5s);
+    &.present {
+        height: 1000px;
         @include transition(height, 0.5s);
-        &.present {
-            height: 1000px;
-            @include transition(height, 0.5s);
-        }
+    }
+    
+}
+.trans-above-blue.trans-top {
+    background-color: $blue;
+    @include transition(height, 0.5s);
+    &.present {
+        height: 1000px;
+        @include transition(height, 0.5s);
     }
 }
-.trans-above-blue {
-    .trans-top {
-        background-color: $blue;
-        @include transition(height, 0.5s);
-        &.present {
-            height: 1000px;
-            @include transition(height, 0.5s);
-        }
-    }
-}
-.trans-left-blue {
-    .trans-top {
-        background-color: $blue;
-        width: 0;
-        position: fixed;
-        height: 100%;
+.trans-left-blue.trans-top {
+    background-color: $blue;
+    width: 0;
+    position: fixed;
+    height: 100%;
+    @include transition(width, 0.5s);
+    &.present {
+        width: 100%;
         @include transition(width, 0.5s);
-        &.present {
-            width: 100%;
-            @include transition(width, 0.5s);
-        }
     }
 }

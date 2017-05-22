@@ -55,7 +55,8 @@
         @include draw-block-after();
     }
     &:hover,
-    &:focus, {
+    &:focus,
+    &.fake-active {
         outline: none;
         border: solid 2px transparent;
         @include transition(all, 1s);
@@ -86,7 +87,8 @@
         @include draw-block-after;
     }
     &:hover,
-    &:focus {
+    &:focus,
+    &.fake-active {
         outline: none;
         background-color: transparent;
         color: $color;
@@ -103,7 +105,8 @@
         }
     }
     &:hover:before,
-    &:focus:before {
+    &:focus:before,
+    &.fake-active:before {
         display: block;
         animation: follow-border 1s; 
     }

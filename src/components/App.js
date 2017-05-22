@@ -9,7 +9,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div>
-                <PageTransition timeout={1200}>
+                <PageTransition timeout={1200} >
                     <Page>
                         {this.props.children}
                     </Page>

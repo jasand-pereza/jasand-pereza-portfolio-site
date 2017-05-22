@@ -30,11 +30,25 @@ export default class Page extends React.Component {
             });
         }
         $('.trans-top').removeClass('present');
+
+        $('.btn-yellow').addClass('fake-active');
+        setTimeout(() => {
+             $('.btn-blue').addClass('fake-active');
+
+             setTimeout(() => {
+                 $('.btn-yellow').removeClass('fake-active');
+
+                 setTimeout(() => {
+                    $('.btn-blue').removeClass('fake-active');
+                 }, 600);
+             }, 600);
+        }, 600);
+       
     }
     render() {
         return(
-            <div className={'page transition-item trans-' + this.getTransition() }>
-                <div className="trans-top"></div>
+            <div className="page transition-item">
+                <div className={'trans-top trans-'  + this.getTransition()}></div>
                  {this.props.children}
             </div>
         );
