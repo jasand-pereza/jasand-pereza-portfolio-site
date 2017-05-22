@@ -5,12 +5,12 @@ import React from 'react';
 import Cookies from 'js-cookie';
 
 // components
+import { Link } from 'react-router';
 import Footer from './../components/Footer';
 import MainNav from './../components/MainNav';
 import Header from './../components/Header';
 import MainContentContainer from './../containers/MainContentContainer';
 import Spacer from './../components/Spacer';
-import Button from './../components/Button';
 import Slider from './../components/Slider';
 import Banner from './../components/Banner';
 
@@ -173,7 +173,7 @@ export default class AboutPage extends React.Component {
                                     <h2 className="callout">Evidence</h2>
                                     <p>What good would the latter be if he just spat out a bunch of buzzwords without anything to back it.</p>
                                     <br/>
-                                    <Button classNames="btn-yellow-outline" url="/work">See the work</Button>
+                                    <Link className="button btn-yellow-outline" to="/work">See the work</Link>
                                 </div>
                             </div>
                             <Spacer multiplier={3}/>

@@ -10,10 +10,9 @@ import Header from './../components/Header';
 import MainContentContainer from './../containers/MainContentContainer';
 import Spacer from './../components/Spacer';
 import Slider from './../components/Slider';
-import Button from './../components/Button';
 import WorkGrid from './../components/WorkGrid';
 import DataWorkGrid from './../data/DataWorkGrid';
-
+import { Link } from 'react-router';
 
 
 export default class HomePage extends React.Component {
@@ -26,7 +25,6 @@ export default class HomePage extends React.Component {
         });
     }
     componentDidMount() {
-        
         let videoPart1Handler = function() {
             if(this.currentTime >= 11) {
                 $('#video-top-home').fadeOut(6000);
@@ -34,11 +32,7 @@ export default class HomePage extends React.Component {
                 return;
             }
         }
-        $('#video-top-home')[0].addEventListener("timeupdate", videoPart1Handler);
-        //  $('#video-top-home')[0].currentTime = 8;
-        //$('#video-top-home')[0].playbackRate = 0.5;
-
-        
+        $('#video-top-home')[0].addEventListener("timeupdate", videoPart1Handler);    
     }
     render() {
         let currentLocation = this.props.location.pathname;
@@ -52,7 +46,6 @@ export default class HomePage extends React.Component {
                 
                 <img className="mobile-video-replacement" src="/assets/img/mobile-home.jpg" />
                 <video id="video-top-home" className="video-top-home" src="/assets/video/chainsaw.mp4"></video>
-                {/*<img className="video-top-home" src="/assets/img/fpo-hipster-wood.jpg"/>*/}
                 <div className="page-wrap">
                     <MainContentContainer page="home">
                         <div className="row row-shorter">
@@ -60,13 +53,12 @@ export default class HomePage extends React.Component {
                                 <p className="callout">Legend has it, he was once a graphic designer who transformed himself into a full-stack code wrangler. Today Jasand has been seen building meaningful habitats for users and fellow developers.</p> 
                                 <Spacer/>
                                 <div className="btn-box">
-                                    <Button classNames="btn-yellow" url="/about"><span>View The Legend</span></Button>
-                                    <Button classNames="btn-yellow-outline" url="/work"><span>His Craft</span></Button><br/><br/>
-                                    <Button classNames="btn-blue" url="https://www.github.com/jasand-pereza" target="_blank"><span>You&apos;re just here to see some code > </span></Button>
+                                    <Link className="button btn-yellow" to="/about"><span>View The Legend</span></Link>
+                                    <Link className="button btn-yellow-outline" to="/work"><span>His Craft</span></Link><br/><br/>
+                                    <Link className="button btn-blue" to="https://www.github.com/jasand-pereza" target="_blank"><span>You&apos;re just here to see some code > </span></Link>
                                 </div>
                                 <br/>
                                 <br/>
-                                {/*<span className="small-copy">Note: None of the lumberjack looking hipsters on this site are really me. I just aspire to one day look that cool.</span>*/}
                             </div>
                         </div>
                         <Spacer multiplier={4}/>
@@ -75,7 +67,7 @@ export default class HomePage extends React.Component {
                         <div className="row">
                             <div className="small-12" style={{ textAlign: 'center'}}>
                                 <p className="callout">Like what you see?</p>
-                                <Button classNames="btn-yellow" url="/work" ><span>See All Work </span></Button>
+                                <Link className="button btn-yellow" to="/work" ><span>See All Work </span></Link>
                             </div>
                         </div>
                         <Spacer multiplier={3}/>
