@@ -1,5 +1,5 @@
 
-// libs and stuff
+// libs
 if(typeof window != 'undefined') {
     require('./../../node_modules/waypoints/lib/jquery.waypoints.min.js');
     require('./../../node_modules/waypoints/lib/shortcuts/sticky.min.js');
