@@ -1,4 +1,4 @@
-# jasand-pereza-portfolio-site
+# Jasand Pereza | Portfolio Site
 100% React (Isomorphic) portfolio site of Jasand Pereza
 
 
